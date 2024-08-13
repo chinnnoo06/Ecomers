@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.Prenda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.Prenda .detalles-prenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Prenda .detalles-prenda a {
+    text-decoration: none;
+    color: #00a6ffbf;
+    transition: color 0.3s;
+}
+
+.Prenda .detalles-prenda a:hover {
+    color: #008ccc;
+}
+
+.Prenda .detalles-prenda .ImgPrenda img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Prenda .detalles-prenda .DatosPrenda {
+    flex: 1;
+    text-align: center;
+}
+
+.Prenda .detalles-prenda .DatosPrenda h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: #333;
+    font-weight: 600;
+}
+
+.Prenda .detalles-prenda .DatosPrenda p {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #666;
+}
+
+.opciones-talla {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.boton-talla {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.boton-talla:hover,
+.boton-talla.active {
+    background-color: #00a6ffbf;
+    color: #fff;
+    transform: scale(1.05);
+}
+.Prenda .detalles-prenda .DatosPrenda .btn{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    align-items: center; 
+}
+
+.boton-agregar,
+.boton-Pagar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a6ffbf;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.boton-agregar:hover,
+.boton-Pagar:hover {
+    background-color: #008ccc;
+}
+#Cantidad {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#Cantidad:focus {
+    border-color: #00a6ffbf;
+    box-shadow: 0 0 5px rgba(0, 166, 255, 0.2);
+}
+/* Calificación */
+.Calificacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.Calificacion .contenido-Calificacion {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Calificacion .contenido-Calificacion h3 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+    font-weight: 600;
+}
+
+.Calificacion .contenido-Calificacion form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Calificacion .contenido-Calificacion .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.Calificacion .contenido-Calificacion .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #333;
+    padding-bottom: 15px;
+}
+
+.Calificacion .contenido-Calificacion .form-group input,
+.Calificacion .contenido-Calificacion .form-group select,
+.Calificacion .contenido-Calificacion .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.Calificacion .contenido-Calificacion .form-group input:focus,
+.Calificacion .contenido-Calificacion .form-group select:focus,
+.Calificacion .contenido-Calificacion .form-group textarea:focus {
+    border-color: #00a6ffbf;
+    outline: none;
+}
+
+.Calificacion .contenido-Calificacion .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Estilos para el sistema de estrellas */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    gap: 20px;
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label i{
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 1.5rem;
+}
+
+.rating label:hover,
+.rating label:hover ~ label{
+    color: #ffcc00;
+}
+
+.rating label.selected i{
+    color: #ffd700;
+}
+
+.Calificacion .contenido-Calificacion .form-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a6ffbf;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.Calificacion .contenido-Calificacion .form-group button:hover {
+    background-color: #008ccc;
+}
+
+
+/* Opiniones */
+.Opiniones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.Opiniones .contenido-opiniones {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 800px;
+}
+
+.Opiniones .contenido-opiniones h3 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+    font-weight: 600;
+}
+
+.Opiniones .contenido-opiniones ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Opiniones .contenido-opiniones .opinion-item {
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.Opiniones .contenido-opiniones .opinion-item .Usuario {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.Opiniones .contenido-opiniones .opinion-item .Usuario i {
+    margin-right: 10px;
+    color: #00a6ffbf;
+}
+
+.Opiniones .contenido-opiniones .opinion-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.Opiniones .contenido-opiniones .opinion-item p strong {
+    color: #333;
+}
+
+.Opiniones .contenido-opiniones .opinion-item + .opinion-item {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.Opiniones .contenido-opiniones .opinion-item button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a6ffbf;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.Opiniones .contenido-opiniones .opinion-item button:hover {
+    background-color: #008ccc;
+}
+
+.Opiniones .contenido-opiniones .opinion-item a {
+    text-decoration: none;
+}
+/* Media Queries para pantallas max-width: 900px */
+@media (max-width: 900px) {
+    .Prenda {
+        padding-top: 100px;
+    }
+
+    .Prenda .detalles-prenda {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Prenda .detalles-prenda .ImgPrenda img {
+        height: 300px;
+        max-width: 100%;
+
+    }
+
+    .Prenda .detalles-prenda .DatosPrenda h2 {
+        font-size: 25px;
+    }
+
+    .Prenda .detalles-prenda .DatosPrenda p {
+        font-size: 18px;
+    }
+
+    .boton-agregar,
+    .boton-Pagar {
+        font-size: 14px;
+    }
+
+
+    .Calificacion .contenido-Calificacion {
+        padding: 15px;
+    }
+
+    .Calificacion .contenido-Calificacion h3 {
+        font-size: 28px;
+    }
+
+    .Calificacion .contenido-Calificacion .form-group {
+        max-width: 100%;
+    }
+    
+    .Calificacion .contenido-Calificacion .form-group label {
+        font-size: 17px;
+    }
+    
+    .Calificacion .contenido-Calificacion .form-group input,
+    .Calificacion .contenido-Calificacion .form-group select,
+    .Calificacion .contenido-Calificacion .form-group textarea {
+        font-size: 13px;
+    }
+
+    .rating label i{
+        cursor: pointer;
+        transition: color 0.3s;
+        font-size: 1rem;
+    }
+
+    .Calificacion .contenido-Calificacion .form-group button {
+        font-size: 14px;
+    }
+
+    .Opiniones .contenido-opiniones {
+        padding: 15px;
+        max-height: 500px;
+    }
+
+    .Opiniones .contenido-opiniones h3 {
+        font-size: 28px;
+    }
+    .Opiniones .contenido-opiniones .opinion-item button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #dde1e9;
+    margin: 0;
+}
+
+.SinResultados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegúrate de que ocupe al menos la altura de la ventana */
+}
+.vacio {
+    text-align: center;
+    padding: 100px;
+
+    min-height: 700px; /* Cambiado de height a min-height */
+    align-items: center;
+    justify-content: center;
+}
+
+.vacio .btn-regresar{
+    background-color: #00a6ffbf;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.vacio .btn-regresar:hover{
+    background-color: #008ccc;
+}
+
+.vacio p {
+    font-size: 2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.vacio i {
+    font-size: 8em;
+    color: #007bff;
+    margin-bottom: 20px;
+}

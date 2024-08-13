@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+.buscar-contenido {
+    width: 100%;
+    max-width: auto; /* Limita el ancho máximo de la barra de búsqueda */
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.form-buscar {
+    display: flex;
+    width: 100%;
+    border: 2px solid #00a6ffbf;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.buscar-input {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 50px 0 0 50px; /* Bordes redondeados */
+}
+
+.busqueda-boton {
+    background-color: #00a6ffbf;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0; /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.busqueda-boton:hover {
+    background-color: #008ccc;
+}
+
+.busqueda-boton i {
+    margin-left: 5px; /* Espacio entre el icono y el texto */
+}
+
+.usuarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    min-height: 100vh; /* Asegúrate de que ocupe al menos la altura de la ventana */
+}
+
+.usuarios .usuarios-contenido {
+    align-items: center;
+    width: 1000px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Permite el scrollbar vertical */
+    max-height: 800px; /* Ajusta la altura máxima para el scroll */
+}
+
+.usuarios .usuarios-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.usuarios .usuarios-header h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.usuarios .usuarios-header p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.lista-usuarios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-usuarios {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    z-index: 0; /* Asegura que los elementos del historial se ubiquen debajo de la cabecera */
+}
+.item-usuarios:hover {
+    background-color: #f9f9f9;
+}
+
+.item-usuarios img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #00a6ffbf;
+    margin-right: 15px;
+}
+
+.detalle-item {
+    flex: 1;
+}
+
+.detalle-item p {
+    margin: 5px 0;
+}
+
+.item-usuarios button {
+    background-color: #00a6ffbf; 
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.item-usuariosl button:hover {
+    background-color: #008ccc;
+}
+
+.item-usuarios .Usuario i{
+    margin-right: 10px;
+    color: #00a6ffbf;
+}
+
+.item-usuarios form i{
+    margin-left: 8px; 
+    color: #fff;
+}
+
+.volver a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.volver a i {
+    color: #333;
+    font-size: 20px;
+}
+
+.volver a:hover {
+    background-color: #eee;
+    transform: scale(1.1);
+}
+
+.animable {
+    opacity: 0; /* Empieza invisible */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.animable.visible {
+    opacity: 1; /* Se vuelve visible */
+    animation: fadeIn 0.4s ease-out forwards; /* Aplica la animación */
+}
+
+.buscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh; /* Asegúrate de que ocupe al menos la altura de la ventana */
+}
+
+/* Estilos para pantallas menores a 900px */
+@media (max-width: 900px) {
+    .usuarios .usuarios-contenido {
+        padding: 10px;
+        max-height: 600px; 
+    }
+
+    .usuarios .usuarios-header h2 {
+        font-size: 1.2em;
+    }
+
+    .usuarios .usuarios-header p {
+        font-size: 0.9em;
+    }
+
+    .usuarios .usuarios-header .botones {
+        flex-direction: column; 
+        gap: 10px;
+        align-items: center; 
+    }
+
+    .usuarios .usuarios-header .botones button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .item-usuarios img {
+        width: 80px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+        margin-right: 10px;
+    }
+    
+    .detalle-item {
+        flex: 1;
+    }
+    
+    .detalle-item h3 {
+        margin: 0;
+        font-size: 1em;
+    }
+    
+    .detalle-item p {
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.historial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    min-height: 100vh; /* Asegúrate de que ocupe al menos la altura de la ventana */
+}
+
+.historial .historial-contenido {
+    align-items: center;
+    width: 1000px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Permite el scrollbar vertical */
+    max-height: 800px; /* Ajusta la altura máxima para el scroll */
+}
+
+.historial .historial-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.historial .historial-header h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.historial .historial-header p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.lista-historial {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-historial {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    z-index: 0; /* Asegura que los elementos del historial se ubiquen debajo de la cabecera */
+}
+.item-historial:hover {
+    background-color: #f9f9f9;
+}
+
+.item-historial img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.detalle-item {
+    flex: 1;
+}
+
+.detalle-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.detalle-item p {
+    margin: 5px 0;
+}
+
+.item-historial button {
+    background-color: #00a6ffbf; 
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.item-historial button:hover {
+    background-color: #008ccc;
+}
+
+.historial-vacio {
+    text-align: center;
+    padding: 100px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 700px; /* Cambiado de height a min-height */
+    align-items: center;
+    justify-content: center;
+}
+
+.historial-vacio .btn-agregar{
+    background-color: #00a6ffbf;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.historial-vacio .btn-agregar:hover{
+    background-color: #008ccc;
+}
+
+.historial-vacio p {
+    font-size: 2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.historial-vacio i {
+    font-size: 8em;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.volver a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.volver a i {
+    color: #333;
+    font-size: 20px;
+}
+
+.volver a:hover {
+    background-color: #eee;
+    transform: scale(1.1);
+}
+
+.animable {
+    opacity: 0; /* Empieza invisible */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.animable.visible {
+    opacity: 1; /* Se vuelve visible */
+    animation: fadeIn 0.4s ease-out forwards; /* Aplica la animación */
+}
+
+/* Estilos para pantallas menores a 900px */
+@media (max-width: 900px) {
+    .historial .historial-contenido {
+        padding: 10px;
+        max-height: 600px; 
+    }
+
+    .historial .historial-header h2 {
+        font-size: 1.2em;
+    }
+
+    .historial .historial-header p {
+        font-size: 0.9em;
+    }
+
+    .historial .historial-header .botones {
+        flex-direction: column; 
+        gap: 10px;
+        align-items: center; 
+    }
+
+    .historial .historial-header .botones button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .item-historial img {
+        width: 80px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+        margin-right: 10px;
+    }
+    
+    .detalle-item {
+        flex: 1;
+    }
+    
+    .detalle-item h3 {
+        margin: 0;
+        font-size: 1em;
+    }
+    
+    .detalle-item p {
+        font-size: 0.8em;
+    }
+}
