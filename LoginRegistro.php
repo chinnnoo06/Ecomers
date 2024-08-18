@@ -46,7 +46,7 @@
                     <label for="file" class="custom-file-upload">
                         <i class="fa fa-cloud-upload"></i> Elige una foto de perfil
                     </label>
-                    <input type="file" id="file" name="Img" accept="image/*" required> 
+                    <input type="file" id="file" name="Img" accept="image/*"> 
                     <p id="file-message" class="file-message"></p>
                     
                     <button>Registrarse</button>

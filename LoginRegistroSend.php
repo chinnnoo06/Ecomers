@@ -18,13 +18,8 @@ if (isset($_POST['Nombre']) && isset($_POST['Apellido']) && isset($_POST['Correo
     if (isset($_FILES['Img']['tmp_name']) && $_FILES['Img']['tmp_name'] != "") {
         $Img = addslashes(file_get_contents($_FILES['Img']['tmp_name']));
     } else {
-        echo '
-        <script>
-            alert("Error al cargar la imagen, por favor intenta nuevamente.");
-            window.history.back();
-        </script>
-        ';
-        exit();
+        $rutaImagenDefecto = __DIR__ . "/IMG/Usuario.png";
+        $Img = addslashes(file_get_contents($rutaImagenDefecto));
     }
 
     // Llamada al procedimiento almacenado para verificar el correo
